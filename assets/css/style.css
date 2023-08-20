@@ -1,16 +1,45 @@
 /* fonts for the website here*/
 @font-face {
-    font-family: "princessofia";
+    font-family: "lumanosimo";
     src: url("../fonts/lumanosimo.ttf") format("truetype");
 
 }
 
-header{
+/* styling the header starts here*/
+.header{
     font-family: 'lumanosimo', Arial, Helvetica, sans-serif;
     text-transform: capitalize;
     color: purple;
     margin:0;
-    padding:0;
+    padding: 1.5rem 5%;
+    align-items: center;
+    display:flex;
+    justify-content:space-between;
+}
+
+.header .menubar a{
+    margin:1rem;
+    font-size:1.5rem;
+}
+
+.header .menubar a:hover{
+    color: #D91979;
+}
+
+.header .icons div{   
+    font-size:2rem;
+    cursor:pointer;
+    margin-left:2rem;
+    
+}
+
+.header .icons div:hover {
+    color:#D91979;
+}
+
+#sakura{
+    height:5rem;
+    width:5rem;
 }
 
 

@@ -29,3 +29,9 @@ On the top left I have created my logo using Canvas, I have chosen a Sakura flow
 <img src=/assets/images/logo.png>
 
 On the top page I created the bar menu with different sections where the user could access:
+
+
+
+## CODE FROM OTHER SOURCES 
+
+Justify content : https://www.w3schools.com/cssref/css3_pr_justify-content.php
