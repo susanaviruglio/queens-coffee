@@ -24,4 +24,8 @@ I used Canvas to create the design for the project. I chose this image for the m
 
 <img src=/assets/images/firstdesign.png>
 
+On the top left I have created my logo using Canvas, I have chosen a Sakura flower in this occasion.
+
+<img src=/assets/images/logo.png>
+
 On the top page I created the bar menu with different sections where the user could access:
