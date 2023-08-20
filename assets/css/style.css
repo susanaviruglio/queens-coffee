@@ -37,6 +37,10 @@
     color:#D91979;
 }
 
+#menu-btn{
+    display:none;
+}
+
 #sakura{
     height:5rem;
     width:5rem;
