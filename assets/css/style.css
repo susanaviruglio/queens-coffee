@@ -5,6 +5,18 @@
 
 }
 
+html {
+    scroll-behavior: smooth; /* w3school font */
+}
+
+body {
+    background-color: #FEDCE7;
+    font-family: 'lumanosimo',Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    color:purple;
+}
+
+
 /* styling the header starts here*/
 .header{
     font-family: 'lumanosimo', Arial, Helvetica, sans-serif;
@@ -47,6 +59,36 @@
 }
 
 
+
+
+
+
+/* media queries*/
+
+@media (max-width: 991px){
+ 
 body {
-    background-color: #FEDCE7;
+     font-size: 45%;
+ }
+
+ .header{
+   padding:1.5rem,2rem;
+ }
+
+}
+
+
+@media (max-width: 991px) {
+
+    #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top:100%;
+        right:0;
+        background:#fff;
+        background:30rem;
+    }
+
 }
