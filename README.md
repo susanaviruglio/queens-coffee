@@ -35,3 +35,4 @@ On the top page I created the bar menu with different sections where the user co
 ## CODE FROM OTHER SOURCES 
 
 Justify content : https://www.w3schools.com/cssref/css3_pr_justify-content.php
+Top navigation bar taken from: <https://www.w3schools.com/cssref/css3_pr_justify-content.php>
