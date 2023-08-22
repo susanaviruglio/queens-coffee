@@ -69,16 +69,27 @@
     background: url(../images/secondesign.jpg)no-repeat;
     display:flex;
     align-items:center;
-    text-align:center;
     background-position:center;
     background-size:cover;
     min-height:80vh;
+    background-color: #FEDCE7;
+   
+    
+    
 }
 section{
     padding:2rem 7%;
 }
 
+a.lovefirst {
+    color: black;
+    font-family:'barriecito';
+    font-size:  2rem;
+    text-transform: uppercase;
+    position:relative;
+    left:150%;
 
+}
 
 
 
