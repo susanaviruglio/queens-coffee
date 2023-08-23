@@ -83,13 +83,61 @@ section{
 
 a.lovefirst {
     color: black;
-    font-family:'barriecito';
-    font-size:  2rem;
+    font-family:'barriecito',Arial, Helvetica, sans-serif;
+     font-size: 2rem;
     text-transform: uppercase;
     position:relative;
-    left:150%;
+    left: 35%;
+
 
 }
+
+#lovecoffee {
+    color: black;
+    font-family: 'lumanosimo',Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-transform: capitalize;
+    position:relative;
+    left: 35%;
+
+}
+
+
+
+ /* footer style starts here*/
+
+ footer {
+     background-color: #FEDCE7;
+ }
+
+ footer>p {
+     color: #D91979;
+     font-family: 'lumanosimo', Arial, Helvetica, sans-serif;
+     font-size: 17px;
+     text-align: center;
+ }
+
+ .socialmedia {
+     text-align: center;
+ }
+
+ .socialmedia li {
+     display: inline;
+ }
+
+ .socialmedia i {
+     font-size: 160%;
+     margin: 1%;
+     padding: 0 5% 0 5%;
+     color: purple;
+ }
+
+ /*footer ends here*/
+
+
+
+
+
 
 
 
@@ -104,6 +152,20 @@ a.lovefirst {
     padding: 34px 43px;
 }
 
+a.lovefirst {
+    font-size: 2rem;
+    left: 29%;
+}
+
+#lovecoffee {
+    font-size: 1rem;
+    left: 29%;
+}
+ 
+
+
+
+
 @media screen and (max-width: 826px) {
     .topnav a {
         padding: 14px 17px 10px 20px;
@@ -112,7 +174,17 @@ a.lovefirst {
     .topnav div {
         padding: 14px 13px;
     }
+   a.lovefirst {
+       font-size: 144%;
+   }
+
+   #lovecoffee {
+       font-size: 85%;
+   }
+
+
 }
+
 
 
 
@@ -159,5 +231,23 @@ a.lovefirst {
   section {
       padding: 2rem;
   }
+
+
+.homepage {
+    min-height: 46vh;
+        background-size: 137%;
+
+} 
+a.lovefirst {
+        font-size: 130%;
+        left: 22%;
+}
+
+#lovecoffee {
+    display:none;
+}
+
+
+
 }
 
