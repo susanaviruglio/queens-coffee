@@ -144,12 +144,16 @@ a.lovefirst {
   width: 400px;
   background-color:#D91979;
   border-radius:10px;
+  position:relative;
 }
 
 .cards, .card, .square {
     display: flex;
     justify-content: center;
     align-items: center;
+    position:absolute;
+
+    
 }
 
 .cards {
@@ -157,23 +161,42 @@ height: 92%;
     width: 107%;
     flex-wrap: wrap;
     margin-top: 5%;
-    padding: 0% 7% 3% 0.4%;}
+    padding: 0% 7% 3% 0.4%;
+}
 
 /*for each card I have calculated the width and height using calc(), 
 I want 4 rows and 4 collumns*/
 .cards .card {
-    height: calc(100% / 4 - 40px );
+    cursor:pointer;
+    height: calc(100% / 4 - 10px );
     width: calc(100%/4 - 10px);
-    position:relative;
-    background:#D91979;
+    perspective:800px;
+    transform-style:preserve-3d;
+    border-radius: 9px;
+    background: #bfa3d5;
+    color: #184d5d;
+    position: relative;
 }
-.card .card-front {
-    display:none;
+
+/*The rotateY() CSS function defines a transformation that rotates
+ an element around the y-axis (vertical) without deforming it
+ https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY*/
+.card .card-back {
+    transform:rotateY(-180deg);
+    
 }
 .card .card-back img {
     max-width: 85px;
-    border-radius: 5px;
+    border-radius: 9px;
 }
+
+.card:hover .card-back {
+    transform: rotateY(0);
+}
+.fa-solid,
+.fas {
+    font-weight: 900;
+    font-size: 25px;}
 
 
 
