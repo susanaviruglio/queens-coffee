@@ -2,8 +2,7 @@
 
 ## Interactive Frontend Development Milestone Project by Susana Viruglio
 
-
-Queen's Coffee is a fictional coffee store website with an only purpose which is educational. The store it is based principally in Japan and it has chains spread across Europe , Asian and USA.
+Queen's Coffee website has a memory game to entertain the user and maybe try our special coffee!!
 ### External User Goals
 
 * Find a different kind of coffee and try our delicious sweets.
