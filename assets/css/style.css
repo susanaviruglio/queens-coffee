@@ -137,7 +137,7 @@ a.lovefirst {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 75vh;
 }
 .game-area {
   height:400px;
@@ -153,20 +153,26 @@ a.lovefirst {
 }
 
 .cards {
-    height:100%;
-    width:100%;
-    flex-wrap:wrap;
-}
+height: 92%;
+    width: 107%;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    padding: 0% 7% 3% 0.4%;}
+
 /*for each card I have calculated the width and height using calc(), 
 I want 4 rows and 4 collumns*/
 .cards .card {
-width: calc(25% - 10px);
-    height: calc(100% / 4 - 10px );
+    height: calc(100% / 4 - 40px );
     width: calc(100%/4 - 10px);
+    position:relative;
+    background:#D91979;
 }
-
+.card .card-front {
+    display:none;
+}
 .card .card-back img {
-    max-width:100px;
+    max-width: 85px;
+    border-radius: 5px;
 }
 
 
