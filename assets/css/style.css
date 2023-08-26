@@ -11,8 +11,6 @@
 }
 
 
-
-
 /* style for the header*/
 .topnav {
   background-color: #FEDCE7;
@@ -54,7 +52,6 @@
   color:#D91979;
 }
 
-
 .topnav .icon {
   display: none;
 }
@@ -72,10 +69,7 @@
     background-position:center;
     background-size:cover;
     min-height:80vh;
-    background-color: #FEDCE7;
-   
-    
-    
+    background-color: #FEDCE7; 
 }
 section{
     padding:2rem 7%;
@@ -88,8 +82,6 @@ a.lovefirst {
     text-transform: uppercase;
     position:relative;
     left: 35%;
-
-
 }
 
 #lovecoffee {
@@ -99,10 +91,7 @@ a.lovefirst {
     text-transform: capitalize;
     position:relative;
     left: 35%;
-
 }
-
-
 
  /* footer style starts here*/
 
@@ -134,8 +123,51 @@ a.lovefirst {
 
  /*footer ends here*/
 
+/* memory game style here*/
 
+.heading-game {
+ font-family:'lumanosimo', Arial, Helvetica, sans-serif;
+ font-size: 2rem;
+ text-align: center;
+ color:purple;
+ text-transform:capitalize;
+}
 
+.gamebody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+.game-area {
+  height:400px;
+  width: 400px;
+  background-color:#D91979;
+  border-radius:10px;
+}
+
+.cards, .card, .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    height:100%;
+    width:100%;
+    flex-wrap:wrap;
+}
+/*for each card I have calculated the width and height using calc(), 
+I want 4 rows and 4 collumns*/
+.cards .card {
+width: calc(25% - 10px);
+    height: calc(100% / 4 - 10px );
+    width: calc(100%/4 - 10px);
+}
+
+.card .card-back img {
+    max-width:100px;
+}
 
 
 
