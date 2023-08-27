@@ -138,6 +138,9 @@ a.lovefirst {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
 }
 .game-area {
   height:400px;
@@ -162,6 +165,7 @@ a.lovefirst {
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
+    
  
 }
 
@@ -171,7 +175,8 @@ I want 4 rows and 4 collumns*/
     cursor:pointer;
     height: calc(100% / 4 - 10px );
     width: calc(100%/4 - 10px);
-    
+    position:relative;
+
 }
 
 .cards,
@@ -181,8 +186,8 @@ I want 4 rows and 4 collumns*/
     height:100%;
     border-radius: 10px;
     padding: 10px;
-    position:relative;
     transform: scale(1);
+    position:absolute;
 }
 
 /*The scale() CSS function defines a transformation that resizes an element on the 2D plane.
@@ -195,21 +200,26 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale*/
 /*The rotateY() CSS function defines a transformation that rotates
  an element around the y-axis (vertical) without deforming it
  https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY*/
-.card .card-back,
-.card .card-front {
-    position:absolute;
+
+.card-front {
+    z-index: 2;
 }
 
-.card .card-back img {
-    max-width: 85px;
-    border-radius: 9px;
+.card:hover .card-front {
+    display:none;
 }
+
+
 
 .card .card-front img {
     max-width: 85px;
     border-radius: 9px;
 }
 
+.card .card-back img {
+    max-width: 85px;
+    border-radius: 9px;
+}
 
 
 
