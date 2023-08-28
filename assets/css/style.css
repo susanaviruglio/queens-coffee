@@ -123,8 +123,9 @@ a.lovefirst {
 
  /*footer ends here*/
 
-/* memory game style here*/
+/* memory game style here--------------------------------------*/
 
+/*heading game style here-----*/
 .heading-game {
  font-family:'lumanosimo', Arial, Helvetica, sans-serif;
  font-size: 2rem;
@@ -132,7 +133,9 @@ a.lovefirst {
  color:purple;
  text-transform:capitalize;
 }
+/* heading game ends here------*/
 
+/* develop style memory game stars here-------------------*/
 .gamebody {
     display: flex;
     align-items: center;
@@ -148,25 +151,21 @@ a.lovefirst {
   background-color:#D91979;
   border-radius:10px;
   position:relative;
-  
-
 }
 
 .cards, .card, .square {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .cards {
-    
     height: 100%;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
+    position:relative;
     
- 
 }
 
 /*for each card I have calculated the width and height using calc(), 
@@ -187,7 +186,6 @@ I want 4 rows and 4 collumns*/
     border-radius: 10px;
     padding: 10px;
     transform: scale(1);
-    position:absolute;
 }
 
 /*The scale() CSS function defines a transformation that resizes an element on the 2D plane.
@@ -197,18 +195,25 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale*/
     transition: transform .2s;
 }
 
-/*The rotateY() CSS function defines a transformation that rotates
- an element around the y-axis (vertical) without deforming it
- https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY*/
-
-.card-front {
-    z-index: 2;
+/* w3schools.com flip and image*/
+.card-back, .card-front {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+ .card-front {
+    position:absolute;
+    z-index:1;
 }
 
-.card:hover .card-front {
-    display:none;
+.card-front.flip {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
+.card-back:hover {
+    z-index:2;
+}
 
 
 .card .card-front img {

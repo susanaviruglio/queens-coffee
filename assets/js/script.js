@@ -15,9 +15,14 @@ document.addEventListener('DOMContentLoaded', function(){
     let clicks = document.getElementsByClassName('square');
     for (let click of clicks) {
         click.addEventListener('click', function(){
+            
             if (this.display != 'none') {
-               EventTarget;
+                let backs = document.getElementsByClassName('card-front');
+                for (let back of backs) {
+                    this.classList.add('flip');
+                }
             }
+            
     })
  }
 })
