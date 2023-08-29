@@ -12,20 +12,37 @@ function myFunction() {
 
 /*Memory game stars here*/
 
-/*query selector all*/
 
+
+
+
+
+
+/*
+function memoryGame() {
+    let clicks = document.getElementsByClassName('square');
+    for (let click of clicks) {
+        click.addEventListener('click', memoryGame) {
+            if (this!== cardOne) {
+                let backs = document.getElementsByClassName('card');
+                for(let back of backs){
+                    this.classList.add('flip');
+                }
+            }
+        }
+    }
+}*/
+
+/*query selector all*/
 const games = document.querySelectorAll('.square');
 /* for each method to select all in an array*/
 games.forEach(game => game.addEventListener('click', memoryGame));
-/*match cards using comparison*/
-function memoryGame() {
-  this.classList.add('flip');
-  if(!flips) {
-    flips = false;
-    cardOne = this;
-  }
-}
+
 
 
 let cardOne, cardTwo;
-let flips = true;
+
+function memoryGame() {
+    this.classList.add('flip');
+    
+}

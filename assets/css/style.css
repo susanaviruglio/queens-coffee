@@ -211,7 +211,7 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale*/
     transform-style: preserve-3d;
 }
 
-.card-back:hover {
+.card-back.flip {
     z-index:2;
 }
 
