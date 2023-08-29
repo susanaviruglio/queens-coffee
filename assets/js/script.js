@@ -43,6 +43,25 @@ games.forEach(game => game.addEventListener('click', memoryGame));
 let cardOne, cardTwo;
 
 function memoryGame() {
-    this.classList.add('flip');
     
+    if (this !== cardOne) {
+        this.classList.add('flip');
+        if (!cardOne) {
+            return cardOne = this;
+        } 
+        cardTwo = this;
+
+        let cardOneImg = cardOne.querySelectAll('img'),
+        cardTwoImg = cardTwo.querySelectAll('img');
+
+        compareImgs(cardOneImg, cardTwoImg);
+    }
+    
+}
+
+function compareImgs(img1,img2) {
+    if (img1 === img2) {
+        alert('hey, it macth!');
+    }
+    alert('card not match!');
 }
