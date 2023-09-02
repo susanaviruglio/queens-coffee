@@ -1,11 +1,11 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }
 
 /*Memory game stars here*/
@@ -56,26 +56,21 @@ function compareImgs(img1,img2) {
         alert('hey, it macth!');
     }
     alert('card not match!');
-<<<<<<< HEAD
-}
-
-=======
 }*/
 
 cardDecks = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P];
 
 imagesGames = [
-  "img1.png",
-  "img2.png",
-  "img3.png",
-  "img4.png",
-  "img5.png",
-  "img6.png",
-  "img7.png",
-  "img8.png",
+    "img1.png",
+    "img2.png",
+    "img3.png",
+    "img4.png",
+    "img5.png",
+    "img6.png",
+    "img7.png",
+    "img8.png",
 ];
 
 document.getElementById("card-game").innerHTML = cardDecks;
 console.log(cardDecks);
 console.log(imagesGames);
->>>>>>> d5fee54 (modified javascript created array with the game images)
