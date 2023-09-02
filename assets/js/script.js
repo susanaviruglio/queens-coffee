@@ -65,3 +65,4 @@ function compareImgs(img1,img2) {
     }
     alert('card not match!');
 }
+
