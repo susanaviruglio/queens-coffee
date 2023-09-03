@@ -58,9 +58,39 @@ function compareImgs(img1,img2) {
     alert('card not match!');
 }*/
 
-cardDecks = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P];
 
-imagesGames = [
+function questionImg() {
+    let questionMark = Array(16).fill('assets/images/question.png');
+
+    for (let i = 0; i < questionMark.length; i++) {
+        let newImg = document.createElement('img');
+        newImg.setAttribute('src', questionMark[i]);
+        newImg.setAttribute("width", "304");
+        newImg.setAttribute("height", "228");
+        newImg.setAttribute("alt", "Purple question mark");
+        document.getElementById('card-game').appendChild(newImg);
+    }
+
+}
+
+let game = questionImg();
+
+console.log(game);
+
+
+
+
+
+
+
+
+let cardDecks =
+    ['A', 'B', 'C', 'D',
+        'E', 'F', 'G', 'H',
+        'I', 'J', 'K', 'L',
+        'M', 'N', 'O', 'P'];
+
+let imagesGames = [
     "img1.png",
     "img2.png",
     "img3.png",
@@ -71,6 +101,6 @@ imagesGames = [
     "img8.png",
 ];
 
-document.getElementById("card-game").innerHTML = cardDecks;
+//document.getElementById("card-game").innerHTML = cardDecks;
 console.log(cardDecks);
 console.log(imagesGames);
