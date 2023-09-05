@@ -11,7 +11,11 @@
 }
 
 
-#card-game {}
+#card-game {
+    max-width: 85px;
+    border-radius: 9px;
+
+}
 
 /* google font icon, question mark*/
 .material-symbols-outlined {
@@ -178,11 +182,11 @@ footer>p {
 }
 
 .cards,
-.card,
-.square {
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .cards {
@@ -203,8 +207,7 @@ I want 4 rows and 4 collumns*/
 }
 
 .cards,
-.card,
-.square {
+.card {
     width: 100%;
     height: 100%;
     border-radius: 10px;

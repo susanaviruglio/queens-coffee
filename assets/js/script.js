@@ -65,8 +65,9 @@ function questionImg() {
     for (let i = 0; i < questionMark.length; i++) {
         let newImg = document.createElement('img');
         newImg.setAttribute('src', questionMark[i]);
-        newImg.setAttribute("width", "304");
-        newImg.setAttribute("height", "228");
+        newImg.setAttribute("width", "100%");
+        newImg.setAttribute("height", "100%");
+        newImg.setAttribute("borderRadius", "9px");
         newImg.setAttribute("alt", "Purple question mark");
         document.getElementById('card-game').appendChild(newImg);
     }
@@ -76,6 +77,8 @@ function questionImg() {
 let game = questionImg();
 
 console.log(game);
+
+
 
 
 
