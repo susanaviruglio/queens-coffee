@@ -136,31 +136,56 @@ footer>p {
 /* heading game ends here------*/
 
 /*game area stars here-----------------*/
+.sectioncard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .game-area {
     height: 400px;
     width: 400px;
     background-color: #d91979;
     border-radius: 10px;
-    position: relative;
     padding: 32px 23px 20px 30px;
+    position: relative;
+}
+
+.front-side {
+    position: relative;
+    z-index: 2;
+}
+
+.back-side {
+    position: absolute;
+    z-index: 1;
 }
 
 #card-game img {
-
     max-width: 85px;
     border-radius: 9px;
     padding: 5px;
-    position: relative;
-    z-index: 2;
-
 }
 
 #back-game img {
     max-width: 85px;
     border-radius: 9px;
     padding: 5px;
-    position: relative;
+}
+
+.button-area {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#buttoncolor {
+    color: pink;
+    background: purple;
+    border-color: pink;
+    border-radius: 9%;
+
+
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */

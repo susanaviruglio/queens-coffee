@@ -94,28 +94,3 @@ let backCards = backImg();
 
 console.log(backCards);
 
-
-
-
-
-
-let cardDecks =
-    ['A', 'B', 'C', 'D',
-        'E', 'F', 'G', 'H',
-        'I', 'J', 'K', 'L',
-        'M', 'N', 'O', 'P'];
-
-let imagesGames = [
-    "img1.png",
-    "img2.png",
-    "img3.png",
-    "img4.png",
-    "img5.png",
-    "img6.png",
-    "img7.png",
-    "img8.png",
-];
-
-//document.getElementById("card-game").innerHTML = cardDecks;
-console.log(cardDecks);
-console.log(imagesGames);
