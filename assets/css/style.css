@@ -10,34 +10,6 @@
     src: url("../fonts/barriecito.ttf") format("truetype");
 }
 
-
-#card-game {
-    max-width: 85px;
-    border-radius: 9px;
-
-}
-
-/* google font icon, question mark*/
-.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
-/* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:'lumanosimo', Arial, Helvetica, sans-serif;}/
-}
-/*body {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:100vh;
-    background:#FEDCE7;
-}*/
-
-
-
 /* style for the header*/
 .topnav {
     background-color: #fedce7;
@@ -163,97 +135,32 @@ footer>p {
 
 /* heading game ends here------*/
 
-/* develop style memory game stars here-------------------*/
-/*.gamebody {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-}*/
+/*game area stars here-----------------*/
+
 .game-area {
     height: 400px;
     width: 400px;
     background-color: #d91979;
     border-radius: 10px;
     position: relative;
+    padding: 32px 23px 20px 30px;
 }
 
-.cards,
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#card-game img {
 
-}
-
-.cards {
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    max-width: 85px;
+    border-radius: 9px;
+    padding: 5px;
     position: relative;
-}
-
-/*for each card I have calculated the width and height using calc(), 
-I want 4 rows and 4 collumns*/
-.cards .card {
-    cursor: pointer;
-    height: calc(100% / 4 - 10px);
-    width: calc(100% / 4 - 10px);
-    position: relative;
-}
-
-.cards,
-.card {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    transform: scale(1);
-}
-
-/*The scale() CSS function defines a transformation that resizes an element on the 2D plane.
-https: //developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale*/
-.cards,
-.card,
-.square:active {
-    transform: scale(0.97);
-    transition: transform 0.2s;
-}
-
-/* w3schools.com flip and image*/
-.card-back,
-.card-front {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    position: absolute;
-    z-index: 1;
-}
-
-.card-front.flip {
-    transform: rotateY(180deg);
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.card-back.flip {
     z-index: 2;
+
 }
 
-.card .card-front img {
+#back-game img {
     max-width: 85px;
     border-radius: 9px;
-}
-
-.card .card-back img {
-    max-width: 85px;
-    border-radius: 9px;
+    padding: 5px;
+    position: relative;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */

@@ -65,9 +65,6 @@ function questionImg() {
     for (let i = 0; i < questionMark.length; i++) {
         let newImg = document.createElement('img');
         newImg.setAttribute('src', questionMark[i]);
-        newImg.setAttribute("width", "100%");
-        newImg.setAttribute("height", "100%");
-        newImg.setAttribute("borderRadius", "9px");
         newImg.setAttribute("alt", "Purple question mark");
         document.getElementById('card-game').appendChild(newImg);
     }
@@ -78,9 +75,24 @@ let game = questionImg();
 
 console.log(game);
 
+// cards hidden underneath
+function backImg() {
+    let backCard = ['assets/images/img1.png', 'assets/images/img1.png', 'assets/images/img2.png',
+        'assets/images/img2.png', 'assets/images/img3.png', 'assets/images/img3.png', 'assets/images/img4.png',
+        'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img5.png',
+        'assets/images/img6.png', 'assets/images/img6.png', 'assets/images/img7.png',
+        'assets/images/img7.png', 'assets/images/img8.png', 'assets/images/img8.png'];
+    for (let i = 0; i < backCard.length; i++) {
+        let newBack = document.createElement('img');
+        newBack.setAttribute('src', backCard[i]);
+        newBack.setAttribute('alt', 'Coffee image');
+        document.getElementById('back-game').appendChild(newBack);
+    }
+}
 
+let backCards = backImg();
 
-
+console.log(backCards);
 
 
 
