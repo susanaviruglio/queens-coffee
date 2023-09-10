@@ -94,3 +94,22 @@ let backCards = backImg();
 
 console.log(backCards);
 
+// I created a button to start the game
+
+function resetGame() {
+    let button = document.getElementById('buttoncolor');
+    button.style.backgroundColor = "#dcf9fe";
+    button.innerHTML = "Reset Game";
+    button.style.color = '#d91979';
+    button.style.borderColor = '#0d4953';
+
+}
+
+
+
+
+
+
+
+
+
