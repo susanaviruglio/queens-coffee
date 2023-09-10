@@ -58,6 +58,7 @@ function compareImgs(img1,img2) {
     alert('card not match!');
 }*/
 
+// function with the question mark to the front
 
 function questionImg() {
     let questionMark = Array(16).fill('assets/images/question.png');
@@ -73,37 +74,64 @@ function questionImg() {
 
 let game = questionImg();
 
-console.log(game);
+
 
 // cards hidden underneath
-function backImg() {
-    let backCard = ['assets/images/img1.png', 'assets/images/img1.png', 'assets/images/img2.png',
-        'assets/images/img2.png', 'assets/images/img3.png', 'assets/images/img3.png', 'assets/images/img4.png',
-        'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img5.png',
-        'assets/images/img6.png', 'assets/images/img6.png', 'assets/images/img7.png',
-        'assets/images/img7.png', 'assets/images/img8.png', 'assets/images/img8.png'];
-    for (let i = 0; i < backCard.length; i++) {
-        let newBack = document.createElement('img');
-        newBack.setAttribute('src', backCard[i]);
-        newBack.setAttribute('alt', 'Coffee image');
-        document.getElementById('back-game').appendChild(newBack);
-    }
+// button game in html: id="buttoncolor"
+const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
+    'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
+    'assets/images/img7.png', 'assets/images/img8.png'];
+const doubleCard = [...backCard, ...backCard];
+
+let gameLength = doubleCard.length;
+
+
+for (let i = 0; i < gameLength; i++) {
+    let shuffleBack = Math.floor(Math.random() * doubleCard.length);
+    let numberCards = doubleCard[shuffleBack];
+
+
+
+    let newBack = document.createElement('img');
+    newBack.setAttribute('src', backCard[shuffleBack]);
+    newBack.setAttribute('alt', 'Coffee image');
+    //newBack.style.visibility = 'hidden';
+    document.getElementById('back-game').appendChild(newBack);
+
+
 }
 
-let backCards = backImg();
 
-console.log(backCards);
+
+function backImg(event) {
+    let shuffleBack = document.getElementById('back-game').children;
+
+    for (let i = 0; i < shuffleBack.length; i++) {
+        let randomCards = Math.floor(Math.random() * shuffleBack.length);
+        let pictures = shuffleBack[randomCards];
+        //images need to repeat at least 1 time
+
+        console.log(pictures);
+
+    }
+
+}
+
+let button = document.getElementById('buttoncolor');
+button.addEventListener('click', backImg);
+
+
+
 
 // I created a button to start the game
 
-function resetGame() {
-    let button = document.getElementById('buttoncolor');
-    button.style.backgroundColor = "#dcf9fe";
-    button.innerHTML = "Reset Game";
-    button.style.color = '#d91979';
-    button.style.borderColor = '#0d4953';
 
-}
+
+/*button.style.backgroundColor = "#dcf9fe";
+button.innerHTML = "Reset Game";
+button.style.color = '#d91979';
+button.style.borderColor = '#0d4953';*/
+
 
 
 
