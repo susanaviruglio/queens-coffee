@@ -165,8 +165,10 @@ footer>p {
     max-width: 85px;
     border-radius: 9px;
     padding: 5px;
-    display: none;
+
 }
+
+
 
 #back-game img {
     max-width: 85px;
@@ -174,6 +176,7 @@ footer>p {
     padding: 5px;
 
 }
+
 
 
 /* start game button here---------------------------------*/

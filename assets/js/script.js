@@ -67,6 +67,7 @@ function questionImg() {
         let newImg = document.createElement('img');
         newImg.setAttribute('src', questionMark[i]);
         newImg.setAttribute("alt", "Purple question mark");
+        newImg.classList.add("front-card");
         document.getElementById('card-game').appendChild(newImg);
     }
 
@@ -74,9 +75,18 @@ function questionImg() {
 
 let game = questionImg();
 
+function flipCard(event) {
 
+    for (let i = 0; i < gameInc.length; i++) {
+        gameInc.setAttribute('display', 'none');
+    }
 
-// cards hidden underneath
+}
+
+let gameInc = document.getElementsByClassName('front-card');
+gameInc.addEventListener('mouseover', flipCard);
+
+// cards shuffle already once open the page ready for the game
 
 
 
