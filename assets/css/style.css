@@ -170,6 +170,12 @@ footer>p {
 
 
 
+
+.flipedcard {
+    visibility: hidden;
+}
+
+
 #back-game img {
     max-width: 85px;
     border-radius: 9px;

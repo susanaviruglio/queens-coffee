@@ -10,53 +10,7 @@ function myFunction() {
 
 /*Memory game stars here*/
 
-/*
-function memoryGame() {
-    let clicks = document.getElementsByClassName('square');
-    for (let click of clicks) {
-        click.addEventListener('click', memoryGame) {
-            if (this!== cardOne) {
-                let backs = document.getElementsByClassName('card');
-                for(let back of backs){
-                    this.classList.add('flip');
-                }
-            }
-        }
-    }
-}*/
 
-/*query selector all*/
-/*const games = document.querySelectorAll('.square');
-/* for each method to select all in an array*/
-/*games.forEach(game => game.addEventListener('click', memoryGame));*/
-
-/*
-
-let cardOne, cardTwo;
-
-function memoryGame() {
-    
-    if (this !== cardOne) {
-        this.classList.add('flip');
-        if (!cardOne) {
-            return cardOne = this;
-        } 
-        cardTwo = this;
-
-        let cardOneImg = cardOne.querySelectAll('img');
-        let cardTwoImg = cardTwo.querySelectAll('img');
-
-        compareImgs(cardOneImg, cardTwoImg);
-    }
-    
-}
-
-function compareImgs(img1,img2) {
-    if (img1 === img2) {
-        alert('hey, it macth!');
-    }
-    alert('card not match!');
-}*/
 
 // function with the question mark to the front
 
@@ -67,7 +21,8 @@ function questionImg() {
         let newImg = document.createElement('img');
         newImg.setAttribute('src', questionMark[i]);
         newImg.setAttribute("alt", "Purple question mark");
-        newImg.classList.add("front-card");
+        newImg.setAttribute('id', i);
+        newImg.setAttribute('onclick', 'flipCard(' + i + ')');
         document.getElementById('card-game').appendChild(newImg);
     }
 
@@ -75,16 +30,19 @@ function questionImg() {
 
 let game = questionImg();
 
-function flipCard(event) {
 
-    for (let i = 0; i < gameInc.length; i++) {
+
+function flipCard(n) {
+    document.getElementById(n).setAttribute('class', 'flipedcard');
+
+
+    /*for (let i = 0; i < gameInc.length; i++) {
         gameInc.setAttribute('display', 'none');
-    }
-
+    }*/
+    console.log(n);
 }
 
-let gameInc = document.getElementsByClassName('front-card');
-gameInc.addEventListener('mouseover', flipCard);
+
 
 // cards shuffle already once open the page ready for the game
 
@@ -103,6 +61,8 @@ function backImg() {
         let newBack = document.createElement('img');
         newBack.setAttribute('src', numberCards); //use the chosen card as the src
         newBack.setAttribute('alt', 'Coffee image');
+        //newBack.setAttribute('id', i);
+        //newBack.setAttribute('onclick', 'flipCard(' + i + ')');
         document.getElementById('back-game').appendChild(newBack);
 
         doubleCard.splice(shuffleBack, 1); // Remove the used card from the doubleCard array
