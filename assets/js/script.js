@@ -12,7 +12,9 @@ function myFunction() {
 
 
 
-// function with the question mark to the front
+/* function with the question mark to the front, with the id i which give a different
+value to each card. Also it has a onclick so with the flipCard function will turn and
+it will show the back card */
 
 function questionImg() {
     let questionMark = Array(16).fill('assets/images/question.png');
@@ -31,14 +33,9 @@ function questionImg() {
 let game = questionImg();
 
 
-
+// cards flip one chick on the front card (question mark)
 function flipCard(n) {
     document.getElementById(n).setAttribute('class', 'flipedcard');
-
-
-    /*for (let i = 0; i < gameInc.length; i++) {
-        gameInc.setAttribute('display', 'none');
-    }*/
     console.log(n);
 }
 
