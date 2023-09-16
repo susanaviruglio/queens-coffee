@@ -149,16 +149,27 @@ footer>p {
     border-radius: 10px;
     padding: 32px 23px 20px 30px;
     position: relative;
+
+}
+
+.cards {
+    perspective: 1000px;
 }
 
 .front-side {
     position: relative;
     z-index: 2;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
 
 .back-side {
     position: absolute;
     z-index: 1;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
 
 #card-game img {
@@ -168,13 +179,17 @@ footer>p {
 
 }
 
+.coffee-card {
+    transform: rotateY(180deg);
+}
+
 
 
 
 .flipedcard {
-    visibility: hidden;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
-
 
 #back-game img {
     max-width: 85px;

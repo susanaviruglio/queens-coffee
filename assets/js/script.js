@@ -12,7 +12,7 @@ function myFunction() {
 
 
 
-/* function with the question mark to the front, with the id i which give a different
+/* function with the question mark to the front, with the id "i" which give a different
 value to each card. Also it has a onclick so with the flipCard function will turn and
 it will show the back card */
 
@@ -33,17 +33,7 @@ function questionImg() {
 let game = questionImg();
 
 
-// cards flip one chick on the front card (question mark)
-function flipCard(n) {
-    document.getElementById(n).setAttribute('class', 'flipedcard');
-    console.log(n);
-}
-
-
-
 // cards shuffle already once open the page ready for the game
-
-
 
 function backImg() {
     const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
@@ -58,8 +48,9 @@ function backImg() {
         let newBack = document.createElement('img');
         newBack.setAttribute('src', numberCards); //use the chosen card as the src
         newBack.setAttribute('alt', 'Coffee image');
+        newBack.setAttribute('class', 'coffee-card');
         //newBack.setAttribute('id', i);
-        //newBack.setAttribute('onclick', 'flipCard(' + i + ')');
+        //newBack.setAttribute('class', 'flipCard(' + i + ')');
         document.getElementById('back-game').appendChild(newBack);
 
         doubleCard.splice(shuffleBack, 1); // Remove the used card from the doubleCard array
@@ -71,6 +62,33 @@ function backImg() {
 let gameShuffle = backImg();
 
 
+
+// cards flip one chick on the front card (question mark)
+/*let count = 0;
+let activeTile = null; // referse to tile which the user just click on
+var awaitingEndOfMove = false; // when is set to true, the user is waiting for the next tile.
+let select = document.getElementsByClassName('coffee-card');*/
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
+function flipCard(n) {
+    let clicks = document.getElementById(n).setAttribute('class', 'flipedcard');
+
+    if (!hasFlippedCard) {
+        //first flip
+        hasFlippedCard = true;
+        firstCard = n;
+
+    } else {
+        //second flip
+        hasFlippedCard = false;
+        secondCard = n;
+        //this card match ?
+    }
+
+}
+
+// number of cards reveal
 
 
 
