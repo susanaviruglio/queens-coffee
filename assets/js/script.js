@@ -101,29 +101,29 @@ function dataFramework() {
     let cardSixteen = document.getElementById('back-game').children[15];// same as 7 
     cardSixteen.setAttribute('data-framework', 'green');
 
-}
 
+    let tiles = [];
+    tiles.push(cardOne, cardTwo, cardThree, cardFour, cardFive, cardSix, cardSeven, cardEight,
+        cardNine, cardTen, cardEleven, cardTwelve, cardThirteen, cardFourteen, cardFifteen, cardSixteen);
+
+    for (let i = 0; i < tiles.length; i++) {
+        let shuffleBack = Math.floor(Math.random() * tiles.length);
+        let numberCards = tiles[shuffleBack];
+
+    }
+}
 dataFramework();
 
 
 
-// shuffle cards
-function shuffleCards() {
-    const orderNumbers = ['1', '2', '3', '4', '5', '6', '7', '8'];
-    const doubleOrderNumbers = [...orderNumbers, ...orderNumbers];
-    let cardsAll = document.getElementById('back-game').children;
-    for (let p = 0; p < cardsAll.length; p++) {
-        let shuffleBack = Math.floor(Math.random() * doubleOrderNumbers.length);
-        document.getElementById('back-game').children.src = cardsAll[shuffleBack];
-        cardsAll.splice(shuffleBack, 1);
 
 
-    }
 
-}
-shuffleCards();
 
-// cards shuffle already once open the page ready for the game
+
+
+
+// cards shuffle alre    ady once open the page ready for the game
 /*function backImg() {
     const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
         'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
