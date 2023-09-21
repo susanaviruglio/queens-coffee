@@ -42,14 +42,11 @@ function backImgOrder() {
         newCards.setAttribute('src', doubleCard[i]);
         newCards.setAttribute('class', 'coffee-cards');
         document.getElementById('back-game').appendChild(newCards);
+
     }
 
+    //give a independent value to each img in the array 'data-framework'
 
-}
-backImgOrder();
-
-//give a independent value to each img in the array 'data-framework'
-function dataFramework() {
     let cardOne = document.getElementById('back-game').children[0];
     cardOne.setAttribute('data-framework', 'white');
 
@@ -106,13 +103,51 @@ function dataFramework() {
     tiles.push(cardOne, cardTwo, cardThree, cardFour, cardFive, cardSix, cardSeven, cardEight,
         cardNine, cardTen, cardEleven, cardTwelve, cardThirteen, cardFourteen, cardFifteen, cardSixteen);
 
-    for (let i = 0; i < tiles.length; i++) {
-        let shuffleBack = Math.floor(Math.random() * tiles.length);
-        let numberCards = tiles[shuffleBack];
 
+
+    //this function src is from https://bost.ocks.org/mike/shuffle/
+    function shuffle(array) {
+        var m = array.length, t, i;
+        console.log(m);
+        // While there remain elements to shuffle…
+        while (m) {
+
+            // Pick a remaining element…
+            i = Math.floor(Math.random() * m--);
+
+            // And swap it with the current element.
+            t = array[m];
+            array[m] = array[i];
+            array[i] = t;
+
+        }
+
+        return array;
     }
+    shuffle(tiles);
+
+
 }
-dataFramework();
+backImgOrder();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
