@@ -30,6 +30,11 @@ function questionImg() {
 
 let game = questionImg();
 
+
+/* backCard is equal to all the 8 images in order, 
+   doubleCard is the double of 8 images
+   then, I appended all of them to the child of the div */
+
 var backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
     'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
     'assets/images/img7.png', 'assets/images/img8.png'];
@@ -55,65 +60,15 @@ function backImgOrder() {
 
 backImgOrder();
 
-//each image an independente variable to be able to shuffle them and compare them
+// get all the images and push them into an array so I can shuffle them in the next function.
 
-var cardOne = document.getElementById('back-game').children[0];
-cardOne.setAttribute('data-framework', 'white');
-
-var cardTwo = document.getElementById('back-game').children[1];
-cardTwo.setAttribute('data-framework', 'brown');
-
-var cardThree = document.getElementById('back-game').children[2];
-cardThree.setAttribute('data-framework', 'lightblue');
-
-var cardFour = document.getElementById('back-game').children[3];
-cardFour.setAttribute('data-framework', 'blue');
-
-var cardFive = document.getElementById('back-game').children[4];
-cardFive.setAttribute('data-framework', 'orange');
-
-var cardSix = document.getElementById('back-game').children[5];
-cardSix.setAttribute('data-framework', 'pink');
-
-var cardSeven = document.getElementById('back-game').children[6];
-cardSeven.setAttribute('data-framework', 'yellow');
-
-var cardEight = document.getElementById('back-game').children[7];
-cardEight.setAttribute('data-framework', 'green');
-
-
-//second part of the array, I want the same frame work of the pair
-
-var cardNine = document.getElementById('back-game').children[8];//same as 0 
-cardNine.setAttribute('data-framework', 'white');
-
-var cardTen = document.getElementById('back-game').children[9]; //same as 1 
-cardTen.setAttribute('data-framework', 'brown');
-
-var cardEleven = document.getElementById('back-game').children[10];//same as 2 
-cardEleven.setAttribute('data-framework', 'lightblue');
-
-var cardTwelve = document.getElementById('back-game').children[11];//same as 3 
-cardTwelve.setAttribute('data-framework', 'blue');
-
-var cardThirteen = document.getElementById('back-game').children[12];// same as 4 
-cardThirteen.setAttribute('data-framework', 'orange');
-
-var cardFourteen = document.getElementById('back-game').children[13];// same as 5 
-cardFourteen.setAttribute('data-framework', 'pink');
-
-var cardFifteen = document.getElementById('back-game').children[14];//same as 6 
-cardFifteen.setAttribute('data-framework', 'yellow');
-
-var cardSixteen = document.getElementById('back-game').children[15];// same as 7 
-cardSixteen.setAttribute('data-framework', 'green');
-
-
+var cardAll = document.getElementById('back-game').children;
 var tiles = [];
-tiles.push(cardOne, cardTwo, cardThree, cardFour, cardFive, cardSix, cardSeven, cardEight,
-    cardNine, cardTen, cardEleven, cardTwelve, cardThirteen, cardFourteen, cardFifteen, cardSixteen);
-console.log(tiles);
 
+for (let i = 0; i < cardAll.length; i++) {
+    tiles.push(cardAll[i]);
+
+}
 
 //this function src is from https://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
@@ -130,21 +85,22 @@ function shuffle(array) {
         array[m] = array[i];
         array[i] = t;
 
-
-
     }
 
     return array;
 }
+
 shuffle(tiles);
 
 
 
 
+
+//compare the cards in the next function flipcard(n) which value n come from the backCardImg()
+
 var hasFlippedCard = false;
 let firstClick, secondClick;
 var pair = [];
-
 function flipCard(n) {
 
     let clicks = document.getElementById(n).classList.add('class', 'flippedcard');
@@ -153,26 +109,22 @@ function flipCard(n) {
         hasFlippedCard = true;
         firstClick = doubleCard[n];
         pair.push(firstClick);
-
+        console.log(firstClick);
 
     } else {
         //second click
         hasFlippedCard = false;
         secondClick = doubleCard[n];
         pair.push(secondClick);
-        console.log(firstClick, secondClick);
+        console.log(secondClick);
 
         // do this cards match ?
         if (pair[0] === pair[1]) {
-            //it's a match
-            console.log('it is a match!');
-
+            console.log('it matched!');
         } else {
 
-
-            pair.splice(0, 1);
-            console.log(pair);
         }
+
 
 
     }
