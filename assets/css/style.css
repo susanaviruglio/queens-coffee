@@ -186,9 +186,14 @@ footer>p {
 
 
 
-.flipedcard {
+.flippedcard {
     transform: rotateY(180deg);
     backface-visibility: hidden;
+}
+
+.unflippedcard {
+    
+    backface-visibility: visible;
 }
 
 #back-game img {
