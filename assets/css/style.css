@@ -159,17 +159,13 @@ footer>p {
 .front-side {
     position: relative;
     z-index: 2;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
+    perspective: 1000px;
 }
 
 .back-side {
     position: absolute;
     z-index: 1;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
+    perspective: 1000px;
 }
 
 #card-game img {
@@ -179,29 +175,26 @@ footer>p {
 
 }
 
-.coffee-card {
-    transform: rotateY(180deg);
-}
-
-
-
-
-.flippedcard {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-}
-
-.unflippedcard {
-    
-    backface-visibility: visible;
-}
-
 #back-game img {
     max-width: 85px;
     border-radius: 9px;
     padding: 5px;
-
+    backface-visibility: hidden;
 }
+
+.flippedcard {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+.unflippedcard {
+
+    backface-visibility: visible;
+}
+
+
 
 
 

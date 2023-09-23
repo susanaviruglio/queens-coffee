@@ -15,15 +15,16 @@ value to each card. Also it has a onclick so with the flipCard function will tur
 it will show the back card */
 
 function questionImg() {
-    let questionMark = Array(16).fill("assets/images/question.png");
+    let questionMark = Array(16).fill('assets/images/question.png');
 
     for (let i = 0; i < questionMark.length; i++) {
-        let newImg = document.createElement("img");
-        newImg.setAttribute("src", questionMark[i]);
-        newImg.setAttribute("alt", "Purple question mark");
-        newImg.setAttribute("id", i);
-        newImg.setAttribute("onclick", "flipCard(" + i + ")");
-        document.getElementById("card-game").appendChild(newImg);
+        let newImg = document.createElement('img');
+        newImg.setAttribute('src', questionMark[i]);
+        newImg.setAttribute('alt', 'Purple question mark');
+        newImg.setAttribute('class', 'question-mark');
+        newImg.setAttribute('id', i);
+        newImg.setAttribute('onclick', 'flipCard(' + i + ')');
+        document.getElementById('card-game').appendChild(newImg);
     }
 }
 
@@ -43,6 +44,8 @@ function backImgOrder() {
         let newCards = document.createElement('img');
         newCards.setAttribute('src', doubleCard[i]);
         newCards.setAttribute('class', 'coffee-cards');
+        newCards.setAttribute('id', i);
+        newCards.setAttribute('onclick', 'flipCard(' + i + ')');
         document.getElementById('back-game').appendChild(newCards);
 
     }
@@ -52,7 +55,7 @@ function backImgOrder() {
 
 backImgOrder();
 
-//give a independent value to each img in the array 'data-framework'
+//each image an independente variable to be able to shuffle them and compare them
 
 var cardOne = document.getElementById('back-game').children[0];
 cardOne.setAttribute('data-framework', 'white');
@@ -138,81 +141,26 @@ shuffle(tiles);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// cards shuffle alre    ady once open the page ready for the game
-/*function backImg() {
-    const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
-        'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
-        'assets/images/img7.png', 'assets/images/img8.png'];
-    const doubleCard = [...backCard, ...backCard];
- 
-    for (let i = 0; i < backCard.length * 2; i++) {
-        let shuffleBack = Math.floor(Math.random() * doubleCard.length); //get a random index
-        let numberCards = doubleCard[shuffleBack]; // use this index to pick a random card
- 
-        let newBack = document.createElement('img');
-        newBack.setAttribute('src', numberCards); //use the chosen card as the src
-        newBack.setAttribute('alt', 'Coffee image');
-        newBack.setAttribute('class', 'coffee-card');
-        //newBack.setAttribute('id', i);
-        //newBack.setAttribute('class', 'flipCard(' + i + ')');
-        document.getElementById('back-game').appendChild(newBack);
- 
-        doubleCard.splice(shuffleBack, 1); // Remove the used card from the doubleCard array
- 
-    }
- 
-}
- 
-let gameShuffle = backImg();*/
-
-
-
 var hasFlippedCard = false;
 let firstClick, secondClick;
 var pair = [];
 
 function flipCard(n) {
-    let clicks = document.getElementById(n).setAttribute('class', 'flippedcard');
 
-
+    let clicks = document.getElementById(n).classList.add('class', 'flippedcard');
     if (!hasFlippedCard) {
         //first click
         hasFlippedCard = true;
         firstClick = doubleCard[n];
         pair.push(firstClick);
 
+
     } else {
         //second click
         hasFlippedCard = false;
         secondClick = doubleCard[n];
         pair.push(secondClick);
+        console.log(firstClick, secondClick);
 
         // do this cards match ?
         if (pair[0] === pair[1]) {
@@ -222,6 +170,8 @@ function flipCard(n) {
         } else {
 
 
+            pair.splice(0, 1);
+            console.log(pair);
         }
 
 
