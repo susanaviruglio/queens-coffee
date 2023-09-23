@@ -54,59 +54,59 @@ backImgOrder();
 
 //give a independent value to each img in the array 'data-framework'
 
-let cardOne = document.getElementById('back-game').children[0];
+var cardOne = document.getElementById('back-game').children[0];
 cardOne.setAttribute('data-framework', 'white');
 
-let cardTwo = document.getElementById('back-game').children[1];
+var cardTwo = document.getElementById('back-game').children[1];
 cardTwo.setAttribute('data-framework', 'brown');
 
-let cardThree = document.getElementById('back-game').children[2];
+var cardThree = document.getElementById('back-game').children[2];
 cardThree.setAttribute('data-framework', 'lightblue');
 
-let cardFour = document.getElementById('back-game').children[3];
+var cardFour = document.getElementById('back-game').children[3];
 cardFour.setAttribute('data-framework', 'blue');
 
-let cardFive = document.getElementById('back-game').children[4];
+var cardFive = document.getElementById('back-game').children[4];
 cardFive.setAttribute('data-framework', 'orange');
 
-let cardSix = document.getElementById('back-game').children[5];
+var cardSix = document.getElementById('back-game').children[5];
 cardSix.setAttribute('data-framework', 'pink');
 
-let cardSeven = document.getElementById('back-game').children[6];
+var cardSeven = document.getElementById('back-game').children[6];
 cardSeven.setAttribute('data-framework', 'yellow');
 
-let cardEight = document.getElementById('back-game').children[7];
+var cardEight = document.getElementById('back-game').children[7];
 cardEight.setAttribute('data-framework', 'green');
 
 
 //second part of the array, I want the same frame work of the pair
 
-let cardNine = document.getElementById('back-game').children[8];//same as 0 
+var cardNine = document.getElementById('back-game').children[8];//same as 0 
 cardNine.setAttribute('data-framework', 'white');
 
-let cardTen = document.getElementById('back-game').children[9]; //same as 1 
+var cardTen = document.getElementById('back-game').children[9]; //same as 1 
 cardTen.setAttribute('data-framework', 'brown');
 
-let cardEleven = document.getElementById('back-game').children[10];//same as 2 
+var cardEleven = document.getElementById('back-game').children[10];//same as 2 
 cardEleven.setAttribute('data-framework', 'lightblue');
 
-let cardTwelve = document.getElementById('back-game').children[11];//same as 3 
+var cardTwelve = document.getElementById('back-game').children[11];//same as 3 
 cardTwelve.setAttribute('data-framework', 'blue');
 
-let cardThirteen = document.getElementById('back-game').children[12];// same as 4 
+var cardThirteen = document.getElementById('back-game').children[12];// same as 4 
 cardThirteen.setAttribute('data-framework', 'orange');
 
-let cardFourteen = document.getElementById('back-game').children[13];// same as 5 
+var cardFourteen = document.getElementById('back-game').children[13];// same as 5 
 cardFourteen.setAttribute('data-framework', 'pink');
 
-let cardFifteen = document.getElementById('back-game').children[14];//same as 6 
+var cardFifteen = document.getElementById('back-game').children[14];//same as 6 
 cardFifteen.setAttribute('data-framework', 'yellow');
 
-let cardSixteen = document.getElementById('back-game').children[15];// same as 7 
+var cardSixteen = document.getElementById('back-game').children[15];// same as 7 
 cardSixteen.setAttribute('data-framework', 'green');
 
 
-let tiles = [];
+var tiles = [];
 tiles.push(cardOne, cardTwo, cardThree, cardFour, cardFive, cardSix, cardSeven, cardEight,
     cardNine, cardTen, cardEleven, cardTwelve, cardThirteen, cardFourteen, cardFifteen, cardSixteen);
 console.log(tiles);
@@ -194,30 +194,41 @@ let gameShuffle = backImg();*/
 
 
 
-
+var hasFlippedCard = false;
+let firstClick, secondClick;
 var pair = [];
 
 function flipCard(n) {
+    let clicks = document.getElementById(n).setAttribute('class', 'flippedcard');
 
 
-    if (pair.length < 2) {
-        let clicks = document.getElementById(n).setAttribute("class", "flipedcard");
-        pair.push(doubleCard[n]);
-        console.log(pair);
+    if (!hasFlippedCard) {
+        //first click
+        hasFlippedCard = true;
+        firstClick = doubleCard[n];
+        pair.push(firstClick);
 
-    }
-}
-
-function checkMatch() {
-
-    if (pair[0] == pair[1]) {
-        document.getElementById('message').innerHTML = 'Found a pair!';
     } else {
-        document.getElementById('message').innerHTML = 'Not match!';
+        //second click
+        hasFlippedCard = false;
+        secondClick = doubleCard[n];
+        pair.push(secondClick);
+
+        // do this cards match ?
+        if (pair[0] === pair[1]) {
+            //it's a match
+            console.log('it is a match!');
+
+        } else {
+
+
+        }
+
+
     }
+
 }
 
-checkMatch();
 
 
 
@@ -228,9 +239,15 @@ checkMatch();
 
 
 
-// I created a button to start the game
 
-function buttonColor(event) {
+
+
+
+
+
+    // I created a button to start the game
+
+/*function buttonColor(event) {
     button.style.backgroundColor = "#dcf9fe";
     button.innerHTML = "Reset Game";
     button.style.color = "#d91979";
@@ -238,4 +255,4 @@ function buttonColor(event) {
 }
 
 let button = document.getElementById("buttoncolor");
-button.addEventListener("click", buttonColor);
+button.addEventListener("click", buttonColor);*/
