@@ -28,7 +28,7 @@ function questionImg() {
     }
 }
 
-let game = questionImg();
+questionImg();
 
 
 /* backCard is equal to all the 8 images in order, 
@@ -48,9 +48,9 @@ function backImgOrder() {
     for (i = 0; i < backCard.length * 2; i++) {
         let newCards = document.createElement('img');
         newCards.setAttribute('src', doubleCard[i]);
-        newCards.setAttribute('class', 'coffee-cards');
+        newCards.setAttribute('id', 'coffee-cards');
         newCards.setAttribute('id', i);
-        newCards.setAttribute('onclick', 'flipCard(' + i + ')');
+        //newCards.setAttribute('onclick', 'flipCard(' + i + ')');
         document.getElementById('back-game').appendChild(newCards);
 
     }
@@ -98,18 +98,68 @@ shuffle(tiles);
 
 //compare the cards in the next function flipcard(n) which value n come from the backCardImg()
 
+
+
+
+
+
+
+
+// game state
+let revealedCount = 0;
+let activeTile = null;
+let awaitingEndofMove = false;
+
+/*function flipCard(n) {
+
+
+    if (awaitingEndofMove) {
+        return;
+    }
+    let clicks = document.getElementById(n).classList.add('class', 'flippedcard');
+
+    if (!activeTile) {
+        activeTile = doubleCard[n];
+        
+
+        return;
+    }
+
+    //down here
+    awaitingEndofMove = true;
+
+    setTimeout(function () {
+        
+        document.getElementById(n).classList.remove('flippedcard');
+
+    }, 1000);
+
+}*/
+
+
+
+
+
+
 var hasFlippedCard = false;
 let firstClick, secondClick;
+let firstId;
 var pair = [];
+
 function flipCard(n) {
 
     let clicks = document.getElementById(n).classList.add('class', 'flippedcard');
+
     if (!hasFlippedCard) {
         //first click
+
+        firstId = n;
         hasFlippedCard = true;
         firstClick = doubleCard[n];
         pair.push(firstClick);
         console.log(firstClick);
+
+        return;
 
     } else {
         //second click
@@ -120,8 +170,15 @@ function flipCard(n) {
 
         // do this cards match ?
         if (pair[0] === pair[1]) {
-            console.log('it matched!');
+
+            console.log('it match!');
         } else {
+            setTimeout(function () {
+                document.getElementById(firstId).classList.remove('flippedcard');
+                document.getElementById(n).classList.remove('flippedcard');
+
+
+            }, 1000);
 
         }
 
@@ -149,7 +206,7 @@ function flipCard(n) {
 
     // I created a button to start the game
 
-/*function buttonColor(event) {
+function buttonColor(event) {
     button.style.backgroundColor = "#dcf9fe";
     button.innerHTML = "Reset Game";
     button.style.color = "#d91979";
@@ -157,4 +214,4 @@ function flipCard(n) {
 }
 
 let button = document.getElementById("buttoncolor");
-button.addEventListener("click", buttonColor);*/
+button.addEventListener("click", buttonColor);
