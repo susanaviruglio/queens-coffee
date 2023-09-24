@@ -149,7 +149,6 @@ footer>p {
     border-radius: 10px;
     padding: 32px 23px 20px 30px;
     position: relative;
-
 }
 
 .cards {
@@ -172,7 +171,6 @@ footer>p {
     max-width: 85px;
     border-radius: 9px;
     padding: 5px;
-
 }
 
 #back-game img {
@@ -189,30 +187,29 @@ footer>p {
     backface-visibility: hidden;
 }
 
-.unflippedcard {
-
-    backface-visibility: visible;
-}
-
-
-
-
-
 /* start game button here---------------------------------*/
 .button-area {
     align-items: center;
     justify-content: center;
     display: flex;
+
 }
 
 #buttoncolor {
-    color: pink;
-    background: purple;
-    border-color: pink;
+    color: #d91979;
+    background: #75ddd8;
+    border-color: #9d3f76;
+    border-style: ridge;
     border-radius: 9%;
-    font-family: 'lumanosimo', Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    margin: 0 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 23px;
+
 }
+
+
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 991px) {
