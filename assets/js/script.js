@@ -1,12 +1,4 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+
 
 /*Memory game stars here*/
 
@@ -96,50 +88,9 @@ shuffle(tiles);
 
 
 //compare the cards in the next function flipcard(n) which value n come from the backCardImg()
+// game flipcard
 
-
-
-
-
-
-
-
-// game state
-let revealedCount = 0;
-let activeTile = null;
-let awaitingEndofMove = false;
-
-/*function flipCard(n) {
-
-
-    if (awaitingEndofMove) {
-        return;
-    }
-    let clicks = document.getElementById(n).classList.add('class', 'flippedcard');
-
-    if (!activeTile) {
-        activeTile = doubleCard[n];
-        
-
-        return;
-    }
-
-    //down here
-    awaitingEndofMove = true;
-
-    setTimeout(function () {
-        
-        document.getElementById(n).classList.remove('flippedcard');
-
-    }, 1000);
-
-}*/
-
-
-
-
-
-
+let activeTile = false;
 var hasFlippedCard = false;
 let firstClick, secondClick;
 var firstId;
@@ -148,6 +99,8 @@ var pair = [];
 function flipCard(n) {
 
     let clicks = document.getElementById(n).classList.add('class', 'flippedcard');
+
+
 
     if (!hasFlippedCard) {
         //first click
@@ -162,22 +115,23 @@ function flipCard(n) {
 
     } else {
         //second click
+        pair.length < 2;
         hasFlippedCard = false;
         secondClick = doubleCard[n];
         pair.push(secondClick);
         console.log(secondClick);
 
     }
-    if (pair[0] === pair[1]) {//issue is not working
+    if (pair[0] === pair[1]) {
         console.log('it match!');
     } else {
 
-        setTimeout(() => {//because this is working
+        setTimeout(() => {
             document.getElementById(firstId).classList.remove('flippedcard');
             document.getElementById(n).classList.remove('flippedcard');
-        }, 1500);
+        }, 500);
 
-    }
+    }// if the images are different while remove them from the array.
     while (pair.length > 0) {
         pair.pop();
     }
