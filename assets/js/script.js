@@ -50,7 +50,6 @@ function backImgOrder() {
         newCards.setAttribute('src', doubleCard[i]);
         newCards.setAttribute('id', 'coffee-cards');
         newCards.setAttribute('id', i);
-        //newCards.setAttribute('onclick', 'flipCard(' + i + ')');
         document.getElementById('back-game').appendChild(newCards);
 
     }
@@ -143,7 +142,7 @@ let awaitingEndofMove = false;
 
 var hasFlippedCard = false;
 let firstClick, secondClick;
-let firstId;
+var firstId;
 var pair = [];
 
 function flipCard(n) {
@@ -168,23 +167,21 @@ function flipCard(n) {
         pair.push(secondClick);
         console.log(secondClick);
 
-        // do this cards match ?
-        if (pair[0] === pair[1]) {
+    }
+    if (pair[0] === pair[1]) {//issue is not working
+        console.log('it match!');
+    } else {
 
-            console.log('it match!');
-        } else {
-            setTimeout(function () {
-                document.getElementById(firstId).classList.remove('flippedcard');
-                document.getElementById(n).classList.remove('flippedcard');
-
-
-            }, 1000);
-
-        }
-
-
+        setTimeout(() => {//because this is working
+            document.getElementById(firstId).classList.remove('flippedcard');
+            document.getElementById(n).classList.remove('flippedcard');
+        }, 1500);
 
     }
+    while (pair.length > 0) {
+        pair.pop();
+    }
+
 
 }
 
@@ -204,14 +201,4 @@ function flipCard(n) {
 
 
 
-    // I created a button to start the game
 
-function buttonColor(event) {
-    button.style.backgroundColor = "#dcf9fe";
-    button.innerHTML = "Reset Game";
-    button.style.color = "#d91979";
-    button.style.borderColor = "#0d4953";
-}
-
-let button = document.getElementById("buttoncolor");
-button.addEventListener("click", buttonColor);
