@@ -187,6 +187,13 @@ footer>p {
     backface-visibility: hidden;
 }
 
+.unflippedcard {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
 /* start game button here---------------------------------*/
 .button-area {
     align-items: center;
