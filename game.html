@@ -1,90 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--boostrap here -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
     <!-- font awesome and google fonts -->
-    <script src="https://kit.fontawesome.com/50eda24e27.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <script
+      src="https://kit.fontawesome.com/50eda24e27.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Queen's Coffee</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!--header starts here-->
     <header>
-        <div class="topnav" id="myTopnav">
-            <a href="index.html" class="active"><img id="sakura" src="assets/images/logo.png" alt="Sakura flower"></a>
-            <a href="#about">About</a>
-            <a href="game.html">Memory Game</a>
-            <a href="#ourfood">Our Food</a>
-            <a href="#ourfood">Contact</a>
-            <div class="fas fa-map-marker-alt" id="marker-btn"></div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+      <div class="topnav">
+        <a href="index.html" class="active"
+          ><img id="sakura" src="assets/images/logo.png" alt="Sakura flower"
+        /></a>
+      </div>
     </header>
     <!---header ends here-->
 
-<!---Memory coffee shop starts here-->
-<h2 class="heading-game">
-    Memory Coffee Game
-</h2>
+    <!---Memory coffee shop starts here-->
+    <h2 class="heading-game">Memory Coffee Game</h2>
 
-<p id="message"> </p>
-<!--I used bootstrap to create the grid for the game -->
-<section class="sectioncard">
+    <!--I used bootstrap to create the grid for the game -->
+    <section class="sectioncard">
+      <div class="container game-area">
+        <div class="row cards">
+          <div class="front-side col-12">
+            <div id="card-game"></div>
+          </div>
+          <div class="back-side col-12">
+            <div id="back-game"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="container game-area">
-    <div class="row cards" >
-        <div class="front-side col-12">
-            <div  id="card-game">
-            
-            </div>
-        </div>
-        <div class="back-side col-12">
-                <div  id="back-game">
-                </div>
-        </div>
-    </div>
+    <div class="button-area col-12">
+      <a href="game.html" id="buttoncolor">Reset Game</a>
     </div>
 
-</section>
-
-
-<div class="button-area col-12">
-    <a href="game.html" id="buttoncolor">Reset Game</a>
-</div>
-
-
- 
-<!---Memory game ends here-->
-
-
+    <!---Memory game ends here-->
 
     <footer>
-
-        <p>Copyright © Sakura's Coffee 2023</p>
-
-        <ul class="socialmedia">
-            <li> <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f"></i></li>
-            <li> <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></li>
-        </ul>
-
+      <p>Copyright © Queen's Coffee 2023</p>
     </footer>
 
-
-<script src="assets/js/script.js"></script>
-</body>
-
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
