@@ -94,15 +94,15 @@ a.lovefirst {
 
 /* footer style starts here*/
 
-footer {
-    background-color: #fedce7;
-}
+
 
 footer>p {
     color: #d91979;
     font-family: "lumanosimo", Arial, Helvetica, sans-serif;
     font-size: 17px;
     text-align: center;
+    margin: 0;
+    background-color: #fedce7;
 }
 
 .socialmedia {
@@ -131,6 +131,8 @@ footer>p {
     text-align: center;
     color: purple;
     text-transform: capitalize;
+    background-color: #fedce7;
+    margin: 0;
 }
 
 /* heading game ends here------*/
@@ -140,6 +142,7 @@ footer>p {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fedce7;
 }
 
 .game-area {
@@ -187,18 +190,14 @@ footer>p {
     backface-visibility: hidden;
 }
 
-.unflippedcard {
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    backface-visibility: hidden;
-}
+
 
 /* start game button here---------------------------------*/
 .button-area {
     align-items: center;
     justify-content: center;
     display: flex;
+    background-color: #fedce7;
 
 }
 
@@ -325,4 +324,11 @@ a.lovefirst {
     #lovecoffee {
         display: none;
     }
+}
+
+/* game area for phone */
+.game-area {
+
+    padding: 30px 14px 20px 30px;
+
 }
