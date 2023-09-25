@@ -324,11 +324,24 @@ a.lovefirst {
     #lovecoffee {
         display: none;
     }
-}
 
-/* game area for phone */
-.game-area {
+    /* game area for phone */
+    .game-area {
+        height: 309px;
+        padding: 30px 14px 20px 30px;
+    }
 
-    padding: 30px 14px 20px 30px;
+    .heading-game {
 
+        font-size: 25px;
+    }
+
+    #card-game img {
+        max-width: 63px;
+    }
+
+    #back-game img {
+        max-width: 63px;
+
+    }
 }
