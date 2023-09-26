@@ -63,8 +63,11 @@ a.playnow {
     font-size: 1rem;
     text-transform: capitalize;
     position: relative;
-
+    margin: 2px;
+    left: 75%;
 }
+
+
 
 /* footer style starts here*/
 
@@ -206,7 +209,6 @@ footer>p {
 
     #lovecoffee {
         font-size: 1rem;
-        left: 29%;
         position: relative;
         left: 77%;
     }
@@ -257,9 +259,9 @@ footer>p {
     }
 
     a.playnow {
-        font-size: 12px;
-        left: -21px;
-        bottom: 81px;
+        font-size: 18px;
+        left: -27px;
+        bottom: 102px;
     }
 
     #lovecoffee {
