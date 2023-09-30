@@ -102,7 +102,7 @@ function flipCard(n) {
         firstClick = doubleCard[n];
         pair.push(firstClick);
         //first click will active the setTimer function
-        setTimer();
+
 
 
         return;
@@ -112,13 +112,19 @@ function flipCard(n) {
         hasFlippedCard = false;
         secondClick = doubleCard[n];
         pair.push(secondClick);
+
     }
     if (pair[0] === pair[1]) {
         winCount += 1;
-        if (winCount === 8) {
-            stopTimer();
 
+        if (winCount == 8) {
+            stopTimer();
+            let winMessage = document.getElementById('result');
+            let message = `Well done! Your new record is ${secs + millsecs} ☕!`;
+            winMessage.innerHTML = message;
         }
+
+
     } else {
         setTimeout(() => {
             document.getElementById(firstId).classList.remove("flippedcard");
@@ -164,7 +170,7 @@ function setTimer() {
     clearTime = setTimeout("setTimer( )", 20);
 };
 
-
+setTimer();
 
 /*********** stop timer *********/
 function stopTimer() {
