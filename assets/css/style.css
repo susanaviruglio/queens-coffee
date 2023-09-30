@@ -111,16 +111,49 @@ footer>p {
     text-transform: capitalize;
     background-color: #fedce7;
     margin: 0;
+    padding-bottom: 20px;
 }
 
 /* heading game ends here------*/
+/* timer stars here ----------------*/
 
+#time {
+    color: #d91979;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: #fedce7;
+}
+
+#result {
+    color: #d91979;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: #fedce7;
+
+}
+
+/*timer ends here-------------------*/
 /*game area stars here-----------------*/
 .sectioncard {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fedce7;
+    padding-top: 0;
+    padding-bottom: 20px;
 }
 
 .game-area {
@@ -284,8 +317,8 @@ footer>p {
     }
 
     .homepage {
-        min-height: 46vh;
         background-size: 137%;
+        padding: 0;
     }
 
 
@@ -297,8 +330,29 @@ footer>p {
     .game-area {
         height: 309px;
         padding: 30px 14px 20px 30px;
+        width: 300px;
     }
 
+    .heading-game {
+
+        font-size: 25px;
+    }
+
+    #card-game img {
+        max-width: 63px;
+    }
+
+    #back-game img {
+        max-width: 63px;
+
+    }
+
+    #result {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 410px) {
     .heading-game {
 
         font-size: 25px;
