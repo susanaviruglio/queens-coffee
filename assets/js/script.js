@@ -120,8 +120,14 @@ function flipCard(n) {
         if (winCount == 8) {
             stopTimer();
             let winMessage = document.getElementById('result');
+            //style border from https://codepen.io/unnegative/pen/dVwYBq;
+            winMessage.style.border = '5px solid transparent';
+            winMessage.style.borderImage = 'linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%)';
+            winMessage.style.borderImageSlice = '1';
             let message = `Well done! Your new record is ${secs + millsecs} ☕!`;
             winMessage.innerHTML = message;
+            let hiddenTimer = document.getElementById('time');
+            hiddenTimer.style.display = "none";
         }
 
 
@@ -162,7 +168,7 @@ function setTimer() {
 
     // display the Count-Up Timer
     let timerElement = document.getElementById("time");
-    timerElement.innerHTML = secs + millsecs;
+    timerElement.innerHTML = 'Time: ' + secs + millsecs;
     /* call the seconds counter after displaying the Count-Up 
     and increment seconds by +1 to keep it counting */
     milliseconds++;
