@@ -183,6 +183,22 @@ As I used bootstrap to create the grid system with all the images I could not fi
 **Solution**: With the support of my teacher we added a *setAttribute* to the main array with the value of id and for it we used the index from the for loop *i*. We added an *onclick* attribute with the value of the function + *i*.
 Then we created a new function with the value *n* which *n* is the number of the index. So I was able to click them and compare them.
 
+## DEPLOYMENT
+
+[Queen's Coffee](https://susanaviruglio.github.io/queens-coffee/)
+
+I have created my project on GitHub and I have developed it in Codeanywhere.
+
+Once I have finished my project I saved all my files, then I pulled and pushed to GitHub
+
+First, I have typed this command "git remote -v",this command shows the git repo is connected to the GitHub repo.
+Secondly, I typed git status and git push.
+Then I went to GitHub and I refreshed the page. So I saw that all the codes where visible.
+I clicked the Settings of my project.
+Then I went to Pages and under "Build and Deployment", I found the source which I select Deployment from a branch.
+Finally I was allowed to share my live website with others.
+
+
 ## CODE FROM OTHER SOURCES 
 
 All the code that I have used to create this website was taken from Code Institute learning platform a part from the next following sources:
