@@ -185,5 +185,35 @@ Then we created a new function with the value *n* which *n* is the number of the
 
 ## CODE FROM OTHER SOURCES 
 
-Justify content : https://www.w3schools.com/cssref/css3_pr_justify-content.php
-Top navigation bar taken from: <https://www.w3schools.com/cssref/css3_pr_justify-content.php>
+All the code that I have used to create this website was taken from Code Institute learning platform a part from the next following sources:
+
+[BOOTSTRAP](https://getbootstrap.com/)
+- I used *Bootstrap 4.0* version, mainly I used the gryd system to build layouts.
+- To create the grid in my game.
+
+[W3SCHOOL](https://www.w3schools.com/)
+
+- Justify content: align-content property.
+
+[CodePel](https://www.codepel.com/vanilla-javascript/javascript-count-up-timer/)
+
+- To create a timer for my game.
+  
+[Memory Game Video Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek)
+
+- An idea how to create a memory game.
+- Used the compare statement for the *flipCard()*function.
+- CSS values for the images.
+  
+[Shuffle Images](https://bost.ocks.org/mike/shuffle/)
+
+- To shuffle the images for the game.
+
+[Push Method](https://stackoverflow.com/questions/38824349/how-to-convert-an-object-to-an-array-of-key-value-pairs-in-javascript)
+
+- To push images from the DOM to an array.
+
+
+[CSS src code](https://codepen.io/unnegative/pen/dVwYBq)
+
+- When the game ends and the timer stops, the user will find a rainbow border with the message.
