@@ -23,6 +23,20 @@ My main purpose is entertain and challenge everybody who wants to play:
 * Build a simple single-player pattern-matching memory game.
 * Clear explanation how to play the game at the index.html page.
 * Memory game based on coffee cups which the user will need to find the pair.
+
+## UX AIMS
+
+* To attract users from any age and want to have fun.
+* To challenge users by getting the best score with the timer.
+* To provide users with attracting colours and clean page.
+* To create a fully responsive design for several devices as desktop, tablets and phones, etc.
+
+## USERS STORIES
+
+1. **How can I play the game?** I am a 6 years old child who wants to play a memory game for first time. I would like to receive a quick explanation about how to play.
+2. **How can I improve my visual memory?** I am interested in improving my visual memory and I have been recommended to play memory games where I can find the pairs.
+3. **How can know my score?** I found memory games quite boring sometimes and I would like one with a bit of challenge.
+
   
 ## DESIGN EVOLUTION
 
@@ -59,7 +73,7 @@ On the main section, I have provided the website with an image with the backgrou
 <img src=/assets/images/secondesign.png>
 
 In this section the user is able to see how to play the game by looking at the two matching images.
-I added the little crown on top of the coffee which it show reference to the project's name.
+I added the little crown on top of the coffee which it shows reference to the project's name.
 
 #### Footer
 
@@ -88,18 +102,62 @@ All images come from this website link: *https://www.freepik.com/* I have change
 <img src=/assets/images/img7.png>
 <img src=/assets/images/img8.png>
 
-## UX AIMS
+## CODE ISSUES
 
-* To attract users from any age and want to have fun.
-* To challenge users by getting the best score with the timer.
-* To provide users with attracting colours and clean page.
-* To create a fully responsive design for several devices as desktop, tablets and phones, etc.
+### First Steps
 
-## USERS STORIES
+At the beginning of the project I created the game in HTML by usign a list and afterwards, I changed for divs. I struggled to mix the images in Javascript and compare them.
 
-1. **How can I play the game?** I am a 6 years old child who wants to play a memory game for first time. I would like to receive a quick explanation about how to play. 
-2. **How can I improve my visual memory?** I am interested in improving my visual memory and I have been recommended to play memory games where I can find the pairs.
-3. **How can know my score?** I found memory games quite boring sometimes and I would like one with a bit of challenge.
+I created an eventListener click for all the game images. But I was stuck on the next section of the conditions. I was having the problem of compare the images because I used image for the front and the back card.  So when I clicked the image it was reconising the image on the top as a first try.
+
+So, I decided to change my approach and create the game using only Javascript.
+
+### Using Javascript to append the images
+
+As my first experience working with Javascript I was not sure how to create the array of images and append the to the DOM. So I received support from my teacher who explained with simple images how to create a random array of images.
+
+Once I was starting adding the images for the project I was struggling to create a random index and mix them all up.
+
+1. Firstly,  I started creating a function with all the coffee images. I wanted to use the splice method so while the images are mixing non of them would repeat on my array,but it was giving the error: 'this is not a function'
+2. Then, I took all the array out of the function, I created for loop while I used math floor math random methods then I used splice and it did not work either.
+3. I tried several times,  step by step what is the best method but it was the only way to create a random array.
+
+**The solution was**:
+I received suppor from a tutor in *Code Institute*
+He said that it looked like I was trying to shuffle the doubleCard array to ensure the cards in my memory game were random, and then I was using the shuffled cards to create the images.
+However, there were a few issues with my current approach:
+
+I was not using the splice method to remove the used cards from the doubleCard array, which would cause repetition.
+
+The line newBack.setAttribute('src', backCard[shuffleBack]); was using the wrong array (backCard instead of doubleCard).
+
+// ... (rest of your code)
+
+const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
+    'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
+    'assets/images/img7.png', 'assets/images/img8.png'];
+
+const doubleCard = [...backCard, ...backCard];
+
+for (let i = 0; i < backCard.length *2; i++) {
+let shuffleBack = Math.floor(Math.random()* doubleCard.length); // Get a random index
+    let numberCards = doubleCard[shuffleBack]; // Use that index to pick a random card
+
+    let newBack = document.createElement('img');
+    newBack.setAttribute('src', numberCards); // Use the chosen card as the src
+    newBack.setAttribute('alt', 'Coffee image');
+    //newBack.style.visibility = 'hidden';
+    document.getElementById('back-game').appendChild(newBack);
+
+    doubleCard.splice(shuffleBack, 1); // Remove the used card from the doubleCard array
+}
+
+// ... (rest of your code)
+
+He made some changes:
+* Used numberCards instead of backCard[shuffleBack] as the source for the new image.
+* After appending the card, he removed it from the doubleCard array to ensure it did not get repeated.
+
 
 
 ## CODE FROM OTHER SOURCES 
