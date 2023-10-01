@@ -204,6 +204,20 @@ Finally I was allowed to share my live website with others.
 
 # Home page
 
+**HTML**
+<img src=/assets/images/testing1.png>
+<img src=/assets/images/testing2.png>
+
+**CSS**
+
+<img src=/assets/images/testing3.png>
+
+## Game page
+
+**HTML**
+<img src=/assets/images/testing1.png>
+<img src=/assets/images/testing2.png>
+
 # CREDITS
 
 ## CODE FROM OTHER SOURCES
