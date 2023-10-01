@@ -2,24 +2,26 @@
 
 ## Interactive Frontend Development Milestone Project by Susana Viruglio
 
-Queen's Coffee website has a memory game to entertain the user and maybe try our special coffee!!
+Queen's Coffee website which has a memory game to entertain the everybody and test their memory.
+
 ### External User Goals
 
-* Find a different kind of coffee and try our delicious sweets.
+* Have fun playing the game.
 
 ### Site Owner's Goals
 
-* Get users to book and collect food and/or drinks.
+* Same as the external users - make a game that you'd enjoy playing yourself.
 
 ### Potencial Features To Include
 
-* Display information about variety of coffees.
-* Allow users to select the best restaurants near and book a table.
+* Build a simple single-player pattern-matching memory game.
+* Clear explanation how to play the game at the index.html page.
+* Memory game based on coffee cups which the user will need to find the pair.
   
   
 ### First Design
 
-I used Canvas to create the design for the project. I chose this image for the menu page and I have deided that it will be the front page.
+I used Canvas to create the design for the project. I chose this image for the menu page and I have decided that it will be the front page.
 
 <img src=/assets/images/firstdesign.png>
 
