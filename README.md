@@ -176,7 +176,12 @@ I had all the cards images shuffle but it did not show any difference in the DOM
 
 **Solution**: with the help of my teacher he said I should had called the function *array()* onto the *backImgOrder()*.
 
+### Click event issues
 
+As I used bootstrap to create the grid system with all the images I could not find a way to link an specific card to turn and show the card behind.
+
+**Solution**: With the support of my teacher we added a *setAttribute* to the main array with the value of id and for it we used the index from the for loop *i*. We added an *onclick* attribute with the value of the function + *i*.
+Then we created a new function with the value *n* which *n* is the number of the index. So I was able to click them and compare them.
 
 ## CODE FROM OTHER SOURCES 
 
