@@ -255,7 +255,7 @@ All the code that I have used to create this website was taken from Code Institu
 [Memory Game Video Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek)
 
 - An idea how to create a memory game.
-- Used the compare statement for the *flipCard()*function.
+- Used the compare statement for the *flipCard()* function.
 - CSS values for the images.
 
 [Shuffle Images](https://bost.ocks.org/mike/shuffle/)
