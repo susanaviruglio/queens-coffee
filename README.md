@@ -123,7 +123,8 @@ Once I was starting adding the images for the project I was struggling to create
 3. I tried several times,  step by step what is the best method but it was the only way to create a random array.
 
 **The solution was**:
-I received suppor from a tutor in *Code Institute*
+I received suppor from a tutor in *Code Institute*.
+
 He said that it looked like I was trying to shuffle the doubleCard array to ensure the cards in my memory game were random, and then I was using the shuffled cards to create the images.
 However, there were a few issues with my current approach:
 
@@ -157,6 +158,23 @@ let shuffleBack = Math.floor(Math.random()* doubleCard.length); // Get a random 
 He made some changes:
 * Used numberCards instead of backCard[shuffleBack] as the source for the new image.
 * After appending the card, he removed it from the doubleCard array to ensure it did not get repeated.
+
+### Second approach append the images first without mix them up
+
+Although, I had all the images created and shuffled. I struggled to compare them because it did not have an specific id. So I went back to append all the images in order first.
+
+I created a function to shuffle all the images ,but my approach was not being successfull because the images ,already appended to the DOM, were not an array. 
+
+I used this website to support me how to push an image to an array.
+*https://stackoverflow.com/questions/38824349/how-to-convert-an-object-to-an-array-of-key-value-pairs-in-javascript*
+
+**Solution**: I used the *push()* in a for loop to push them all to an array.
+
+### I shuffled the images ,but the changed did not appear in the DOM
+
+I had all the cards images shuffle but it did not show any difference in the DOM.
+
+**Solution**: with the help of my teacher he said I should had called the function *array()* onto the *backImgOrder()*.
 
 
 
