@@ -215,8 +215,19 @@ Finally I was allowed to share my live website with others.
 ## Game page
 
 **HTML**
-<img src=/assets/images/testing1.png>
-<img src=/assets/images/testing2.png>
+
+<img src=/assets/images/testing4.png>
+  
+* I have warning because I do not have a heading in my game section.
+<img src=/assets/images/testing5.png>
+
+**CSS**
+<img src=/assets/images/testing6.png>
+
+**JavaScript**
+
+<img src=/assets/images/testing7.png>
+
 
 # CREDITS
 
