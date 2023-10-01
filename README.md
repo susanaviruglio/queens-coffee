@@ -1,5 +1,5 @@
 # Queen's Coffee
-
+<img src=/assets/images/presentacion.png>
 ## Interactive Frontend Development Milestone Project by Susana Viruglio
 
 Queen's Coffee is website which has a memory game to entertain the everybody and to test their memory. The only purpose of this project is just Educational. The idea of the name came from my favourite music band which is Queen, my favourite colour is pink and also I love coffee, so I decided to mix all this to create this project.
