@@ -228,6 +228,9 @@ Finally I was allowed to share my live website with others.
 
 <img src=/assets/images/testing7.png>
 
+**Documentation on using Developer Tools Lighthouse**
+
+<img src=/assets/images/testing8.png>
 
 # CREDITS
 
