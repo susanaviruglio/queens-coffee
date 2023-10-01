@@ -43,6 +43,7 @@ function backImgOrder() {
     for (i = 0; i < backCard.length * 2; i++) {
         let newCards = document.createElement("img");
         newCards.setAttribute("src", doubleCard[i]);
+        newCards.setAttribute('alt', 'coffee images');
         newCards.setAttribute("id", "coffee-cards");
         newCards.setAttribute("id", i);
         document.getElementById("back-game").appendChild(newCards);
