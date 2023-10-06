@@ -1,5 +1,5 @@
 # Queen's Coffee
-<img src=/assets/images/presentacion.png>
+<img src=/assets/images/presentation.png>
 
 ## Interactive Frontend Development Milestone Project by Susana Viruglio
 
@@ -44,12 +44,12 @@ My main purpose is entertain and challenge everybody who wants to play:
 
 #### Home Page
 
-<img src=/assets/images/figma1.png>
+<img src=/assets/images/figmaone.png>
 
 #### Game Area
 
 It was my first idea of the game at the beginning.
-<img src=/assets/images/figma2.png>
+<img src=/assets/images/figmatwo.png>
 
 ### First Design with colour using _Canvas_
 
@@ -94,14 +94,14 @@ As I mentioned previously the header is the same as the home page.
 - Back cards: there are 8 variety of cards, that the user will find while playing.
   All images come from this website link: *https://www.freepik.com/* I have changed the background colour to make it more fun and challenging.
 
-<img src=/assets/images/img1.png>
-<img src=/assets/images/img2.png>
-<img src=/assets/images/img3.png>
-<img src=/assets/images/img4.png>
-<img src=/assets/images/img5.png>
-<img src=/assets/images/img6.png>
-<img src=/assets/images/img7.png>
-<img src=/assets/images/img8.png>
+<img src=/assets/images/imgone.png>
+<img src=/assets/images/imgtwo.png>
+<img src=/assets/images/imgthree.png>
+<img src=/assets/images/imgfour.png>
+<img src=/assets/images/imgfive.png>
+<img src=/assets/images/imgsix.png>
+<img src=/assets/images/imgseven.png>
+<img src=/assets/images/imgeight.png>
 
 ## CODE ISSUES
 
@@ -206,32 +206,32 @@ Finally I was allowed to share my live website with others.
 # Home page
 
 **HTML**
-<img src=/assets/images/testing1.png>
-<img src=/assets/images/testing2.png>
+<img src=/assets/images/testingone.png>
+<img src=/assets/images/testingtwo.png>
 
 **CSS**
 
-<img src=/assets/images/testing3.png>
+<img src=/assets/images/testingthree.png>
 
 ## Game page
 
 **HTML**
 
-<img src=/assets/images/testing4.png>
+<img src=/assets/images/testingfour.png>
   
 * I have warning because I do not have a heading in my game section.
-<img src=/assets/images/testing5.png>
+<img src=/assets/images/testingfive.png>
 
 **CSS**
-<img src=/assets/images/testing6.png>
+<img src=/assets/images/testingsix.png>
 
 **JavaScript**
 
-<img src=/assets/images/testing7.png>
+<img src=/assets/images/testingseven.png>
 
 **Documentation on using Developer Tools Lighthouse**
 
-<img src=/assets/images/testing8.png>
+<img src=/assets/images/testingeight.png>
 
 # CREDITS
 
