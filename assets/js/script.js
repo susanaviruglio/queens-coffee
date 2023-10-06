@@ -29,14 +29,14 @@ questionImg();
    then, I appended all of them to the child of the div */
 
 var backCard = [
-    "assets/images/img1.png",
-    "assets/images/img2.png",
-    "assets/images/img3.png",
-    "assets/images/img4.png",
-    "assets/images/img5.png",
-    "assets/images/img6.png",
-    "assets/images/img7.png",
-    "assets/images/img8.png",
+    "assets/images/imgone.png",
+    "assets/images/imgtwo.png",
+    "assets/images/imgthree.png",
+    "assets/images/imgfour.png",
+    "assets/images/imgfive.png",
+    "assets/images/imgsix.png",
+    "assets/images/imgseven.png",
+    "assets/images/imgeight.png",
 ];
 var doubleCard = [...backCard, ...backCard];
 
@@ -205,4 +205,3 @@ function stopTimer() {
 }
 
 /*********** stop timer *********/
-
