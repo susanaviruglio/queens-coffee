@@ -1,5 +1,8 @@
 # Queen's Coffee
+
 <img src=/assets/images/presentation.png>
+
+[Queen's Coffee, Have a look here!](https://susanaviruglio.github.io/queens-coffee/)
 
 ## Interactive Frontend Development Milestone Project by Susana Viruglio
 
@@ -19,7 +22,7 @@ My main purpose is entertain and challenge everybody who wants to play:
 
 - Same as the external users - make a game that you'd enjoy playing yourself.
 
-### Potencial Features To Include
+### Potential Features To Include
 
 - Build a simple single-player pattern-matching memory game.
 - Clear explanation how to play the game at the index.html page.
@@ -61,7 +64,7 @@ On the top left, I have created my logo using Canvas, I have chosen a Sakura flo
 
 <img src=/assets/images/logo.png>
 
-### Home page
+#### Home page
 
 #### Header
 
@@ -103,7 +106,7 @@ As I mentioned previously the header is the same as the home page.
 <img src=/assets/images/imgseven.png>
 <img src=/assets/images/imgeight.png>
 
-## CODE ISSUES
+## TESTING 
 
 ### First Steps
 
@@ -131,19 +134,20 @@ However, there were a few issues with my current approach:
 
 I was not using the splice method to remove the used cards from the doubleCard array, which would cause repetition.
 
-The line newBack.setAttribute('src', backCard[shuffleBack]); was using the wrong array (backCard instead of doubleCard).
+The line **newBack.setAttribute('src', backCard[shuffleBack])**; was using the wrong array (backCard instead of doubleCard).
 
 // ... (rest of your code)
 
-const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
-'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
-'assets/images/img7.png', 'assets/images/img8.png'];
+    const backCard = ['assets/images/img1.png', 'assets/images/img2.png', 'assets/images/img3.png',
+    'assets/images/img4.png', 'assets/images/img5.png', 'assets/images/img6.png',
+    'assets/images/img7.png', 'assets/images/img8.png'];
 
-const doubleCard = [...backCard, ...backCard];
+    const doubleCard = [...backCard, ...backCard];
 
-for (let i = 0; i < backCard.length _2; i++) {
-let shuffleBack = Math.floor(Math.random()_ doubleCard.length); // Get a random index
-let numberCards = doubleCard[shuffleBack]; // Use that index to pick a random card
+    for (let i = 0; i < backCard.length _2; i++) {
+    let shuffleBack = Math.floor(Math.random()_ doubleCard.length); // Get a random index
+    let numberCards = doubleCard[shuffleBack];
+    // Use that index to pick a random card
 
     let newBack = document.createElement('img');
     newBack.setAttribute('src', numberCards); // Use the chosen card as the src
@@ -152,8 +156,7 @@ let numberCards = doubleCard[shuffleBack]; // Use that index to pick a random ca
     document.getElementById('back-game').appendChild(newBack);
 
     doubleCard.splice(shuffleBack, 1); // Remove the used card from the doubleCard array
-
-}
+    }
 
 // ... (rest of your code)
 
@@ -188,24 +191,42 @@ Then we created a new function with the value _n_ which _n_ is the number of the
 
 ## DEPLOYMENT
 
-[Queen's Coffee](https://susanaviruglio.github.io/queens-coffee/)
+### Github
 
-I have created my project on GitHub and I have developed it in Codeanywhere.
+This project is deployed using GitHub pages using the following process:
 
-Once I have finished my project I saved all my files, then I pulled and pushed to GitHub
+**Deploying a GitHub Repository via GitHub Pages**
 
-First, I have typed this command "git remote -v",this command shows the git repo is connected to the GitHub repo.
-Secondly, I typed git status and git push.
-Then I went to GitHub and I refreshed the page. So I saw that all the codes where visible.
-I clicked the Settings of my project.
-Then I went to Pages and under "Build and Deployment", I found the source which I select Deployment from a branch.
-Finally I was allowed to share my live website with others.
+1. In your Repository section, select the Repository you wish to deploy.
+2. In the top horizontal Menu, locate and click the Settings link.
+3. Inside the Setting page, around halfway down locate the GitHub Pages Section.
+4. Under Source, select the None tab and change it to Master and click Save.
+5. Finally once the page resets scroll back down to the GitHub Pages Section to see the following message *"Your site is ready to be published at (Link to the GitHub Page Web Address)"*. It can take time for the link to open your project initially, so please don't be worried if it down not load immediately.
+
+**Forking the Github Repository**
+
+You can fork a GitHub Repository to make a copy of the original repository to view or make changes without it affecting the original repository.
+
+- Find the GitHub repository.
+- At the top of the page to the right, under your account, click the Fork button.
+- You will now have a copy of the repository in your GitHub account.
+  
+**Making a Local Clone**
+
+1. Find the GitHub Repository.
+2. Click the Code button
+3. Copy the link shown.
+4. In Gitpod, change the directory to the location you would like the cloned directory to be located.
+5. Type git clone, and paste the link you copied in step 3.
+6. Press Enter to have the local clone created.
+
+[Test the Web here: Queen's Coffee.](https://susanaviruglio.github.io/queens-coffee/)
 
 ## HTML AND CSS VALIDATOR
 
-# Home page
+### Home page
 
-**HTML**
+#### **HTML**
 <img src=/assets/images/testingone.png>
 <img src=/assets/images/testingtwo.png>
 
@@ -215,21 +236,21 @@ Finally I was allowed to share my live website with others.
 
 ## Game page
 
-**HTML**
+#### **HTML**
 
 <img src=/assets/images/testingfour.png>
   
 * I have warning because I do not have a heading in my game section.
 <img src=/assets/images/testingfive.png>
 
-**CSS**
+#### **CSS**
 <img src=/assets/images/testingsix.png>
 
 **JavaScript**
 
 <img src=/assets/images/testingseven.png>
 
-**Documentation on using Developer Tools Lighthouse**
+#### **Documentation on using Developer Tools Lighthouse**
 
 <img src=/assets/images/testingeight.png>
 
