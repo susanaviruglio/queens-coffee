@@ -10,7 +10,7 @@ Queen's Coffee is website which has a memory game to entertain the everybody and
 My main purpose is entertain and challenge everybody who wants to play:
 
 1. Photos: discover cute coffee faces while you play.
-2. Colours: there are 8 different coffee images which I have created all of the with different background colours, 2 whites, 2 greens, 2 pinks and 2 blues; just to make it more challenging.
+2. Colours: there are eight different coffee images which I have created all of the with different background colours, two whites, two greens, two pinks and two blues; just to make it more challenging.
 3. Explanation: the explanation of how to play the game is just at the home page with just a simple image.
 4. Timer: I have created a timer to make it more challenging and less boring for those who are really fast.
 
