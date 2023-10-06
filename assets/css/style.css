@@ -67,11 +67,7 @@ a.playnow {
     left: 289%;
 }
 
-
-
 /* footer style starts here*/
-
-
 
 footer>p {
     color: #d91979;
@@ -115,6 +111,7 @@ footer>p {
 }
 
 /* heading game ends here------*/
+
 /* timer stars here ----------------*/
 
 #time {
@@ -146,6 +143,7 @@ footer>p {
 }
 
 /*timer ends here-------------------*/
+
 /*game area stars here-----------------*/
 .sectioncard {
     display: flex;
@@ -201,9 +199,8 @@ footer>p {
     backface-visibility: hidden;
 }
 
-
-
 /* start game button here---------------------------------*/
+
 .button-area {
     align-items: center;
     justify-content: center;
@@ -226,8 +223,6 @@ footer>p {
 
 }
 
-
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 991px) {
     .topnav a {
@@ -237,8 +232,6 @@ footer>p {
     .topnav div {
         padding: 34px 43px;
     }
-
-
 
     #lovecoffee {
         font-size: 1rem;
@@ -257,7 +250,6 @@ footer>p {
     .topnav div {
         padding: 14px 13px;
     }
-
 
     #lovecoffee {
         font-size: 63%;
