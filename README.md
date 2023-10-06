@@ -2,9 +2,9 @@
 
 <img src=/assets/images/presentation.png>
 
-[Queen's Coffee, Have a look here!](https://susanaviruglio.github.io/queens-coffee/)
-
 ## Interactive Frontend Development Milestone Project by Susana Viruglio
+
+[Queen's Coffee, Have a look here!](https://susanaviruglio.github.io/queens-coffee/)
 
 Queen's Coffee is website which has a memory game to entertain the everybody and to test their memory. The only purpose of this project is just Educational. The idea of the name came from my favourite music band which is Queen, my favourite colour is pink and also I love coffee, so I decided to mix all this to create this project.
 My main purpose is entertain and challenge everybody who wants to play:
