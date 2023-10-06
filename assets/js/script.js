@@ -44,7 +44,7 @@ var doubleCard = [...backCard, ...backCard];
 function backImgOrder() {
     // I need to call the function here to make it work;
     shuffle(doubleCard);
-    console.log(doubleCard); // I have leave this to check the answer of the game
+
     for (i = 0; i < backCard.length * 2; i++) {
         let newCards = document.createElement("img");
         newCards.setAttribute("src", doubleCard[i]);
