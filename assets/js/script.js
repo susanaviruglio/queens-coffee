@@ -183,7 +183,7 @@ function setTimer() {
     milliseconds++;
 
     clearTime = setTimeout("setTimer( )", 20);
-};
+}
 
 setTimer();
 
