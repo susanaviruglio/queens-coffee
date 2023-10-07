@@ -45,7 +45,7 @@ function backImgOrder() {
     // I need to call the function here to make it work;
     shuffle(doubleCard);
 
-    for (i = 0; i < backCard.length * 2; i++) {
+    for (let i = 0; i < backCard.length * 2; i++) {
         let newCards = document.createElement("img");
         newCards.setAttribute("src", doubleCard[i]);
         newCards.setAttribute('alt', 'coffee images');
@@ -100,7 +100,7 @@ var winCount = 0; //the counter will increase everything the player finds a matc
 
 function flipCard(n) {
     //n is the value from the index "i" from questionImg function
-    let clicks = document.getElementById(n).classList.add("class", "flippedcard");
+    document.getElementById(n).classList.add("class", "flippedcard");
 
     //if the player has not click any card then:
     if (!hasFlippedCard) {
