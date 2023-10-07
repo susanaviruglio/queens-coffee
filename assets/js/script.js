@@ -115,7 +115,6 @@ function flipCard(n) {
 
     } else {
         //second click shows the second card and hasflippedcard into false.
-        pair.length < 2;//max length of the array is 2
         hasFlippedCard = false;
         secondClick = doubleCard[n];
         pair.push(secondClick);
